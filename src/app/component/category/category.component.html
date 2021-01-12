@@ -1,3 +1,3 @@
-<mat-card *ngFor='let cat of CategoryList'>
+<mat-card *ngFor='let cat of CategoryList' routerLink="/resolution">
     {{cat.payload.doc.data().category}}
 </mat-card>

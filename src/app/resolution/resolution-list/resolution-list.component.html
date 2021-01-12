@@ -1,1 +1,9 @@
-<p>resolution-list works!</p>
+<mat-card *ngFor='let resolution of ResolutionList'>
+    <mat-card-header>
+        <mat-card-title>{{resolution.payload.doc.data().title}}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        {{resolution.payload.doc.data().description}}
+    </mat-card-content>
+
+</mat-card>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ResolutionService } from 'src/app/shared/services/resolution.service';
 
 @Component({
   selector: 'app-resolution-list',
@@ -6,10 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./resolution-list.component.scss']
 })
 export class ResolutionListComponent implements OnInit {
+  ResolutionList = null
+  CategoryId
 
-  constructor() { }
+  constructor(private rs: ResolutionService) { }
 
   ngOnInit(): void {
+    this.rs.GetResolutions().subscribe(data=>(
+      this.ResolutionList = data
+    ))
   }
 
 }
