@@ -1,1 +1,3 @@
-<p>category works!</p>
+<mat-card *ngFor='let cat of CategoryList'>
+    {{cat.payload.doc.data().category}}
+</mat-card>
