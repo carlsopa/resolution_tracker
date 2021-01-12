@@ -8,6 +8,9 @@ import { ResolutionDetailComponent } from './resolution/resolution-detail/resolu
 import { ResolutionListComponent } from './resolution/resolution-list/resolution-list.component';
 import { CategoryComponent } from './component/category/category.component';
 import { ResolutionMaterialModule } from './material-module';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireModule } from '@angular/fire';
+import { environment } from 'src/environments/environment';
 
 @NgModule({
   declarations: [
@@ -20,7 +23,9 @@ import { ResolutionMaterialModule } from './material-module';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    ResolutionMaterialModule
+    ResolutionMaterialModule,
+    AngularFirestoreModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig)
   ],
   providers: [],
   bootstrap: [AppComponent]
