@@ -1,4 +1,4 @@
-<h1 matDialogTitle>Title</h1>
+<h1 matDialogTitle>{{data.id}}</h1>
 
 <mat-dialog-content>
     <mat-form-field>
@@ -11,7 +11,7 @@
 </mat-dialog-content>
 
 <mat-dialog-actions>
-    <button mat-button matDialogClose>Close dialog</button>
-    <button mat-button>Action</button>
+    <button mat-button matDialogClose matDialogClose='false'>Close dialog</button>
+    <button mat-button matDialogClose matDialogClose='true'>Action</button>
     
 </mat-dialog-actions>
