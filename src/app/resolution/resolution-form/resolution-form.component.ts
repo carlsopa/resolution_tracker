@@ -8,15 +8,14 @@ import { MatDialog, MatDialogConfig, MatDialogRef, MAT_DIALOG_DATA } from '@angu
   styleUrls: ['./resolution-form.component.scss']
 })
 export class ResolutionFormComponent implements OnInit {
+  title: string
+  description: string
 
-  constructor(@Inject(MAT_DIALOG_DATA) private data: any) { }
+  constructor(@Inject(MAT_DIALOG_DATA) public data: any) { }
   ngOnInit() {
-
+    console.log(this.data)
   }
-
-  
-    
-  }
+}
 
   
 

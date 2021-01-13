@@ -13,6 +13,8 @@ export class ResolutionListComponent implements OnInit {
   ResolutionList = null
   CategoryId
   id
+  title
+  description
 
   constructor(
     private rs: ResolutionService,
@@ -27,7 +29,7 @@ export class ResolutionListComponent implements OnInit {
   }
    OpenNewDialog(){
     console.log(this.id)
-    let dialogRef = this.dialog.open(ResolutionFormComponent,  {data: {id: this.id}})
+    let dialogRef = this.dialog.open(ResolutionFormComponent,  {data: {id: this.id, title: this.title, description: this.description}})
     dialogRef.afterClosed().subscribe(result=>{
       console.log(result)
     })
