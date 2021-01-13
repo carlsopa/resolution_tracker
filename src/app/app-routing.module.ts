@@ -6,7 +6,7 @@ import { ResolutionListComponent } from './resolution/resolution-list/resolution
 
 const routes: Routes = [
   {path: 'category', component: CategoryComponent},
-  {path: 'resolution', component: ResolutionListComponent}
+  {path: 'resolution/:id', component: ResolutionListComponent}
 ];
 
 @NgModule({

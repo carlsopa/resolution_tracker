@@ -11,13 +11,17 @@ import { ResolutionMaterialModule } from './material-module';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireModule } from '@angular/fire';
 import { environment } from 'src/environments/environment';
+import { ResolutionFormComponent } from './resolution/resolution-form/resolution-form.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     ResolutionDetailComponent,
     ResolutionListComponent,
-    CategoryComponent
+    CategoryComponent,
+    ResolutionFormComponent
   ],
   imports: [
     BrowserModule,
@@ -25,9 +29,12 @@ import { environment } from 'src/environments/environment';
     BrowserAnimationsModule,
     ResolutionMaterialModule,
     AngularFirestoreModule,
-    AngularFireModule.initializeApp(environment.firebaseConfig)
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    MatDialogModule,
+    FormsModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [ResolutionFormComponent]
 })
 export class AppModule { }
