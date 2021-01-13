@@ -16,8 +16,8 @@ export class ResolutionService {
   DeleteCategory(){
     console.log('deleted a category')
   }
-  GetResolutions(){
-    return this.fs.collection('resolution', ref=> ref.where('category','==','CVJmbmbiiDnqyafKQDuY')).snapshotChanges();
+  GetResolutions(id){
+    return this.fs.collection('resolution', ref=> ref.where('category','==',id)).snapshotChanges();
   }
   CreateResolution(){
     console.log('create resolution')

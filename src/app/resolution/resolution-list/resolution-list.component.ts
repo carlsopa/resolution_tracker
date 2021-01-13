@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { ResolutionService } from 'src/app/shared/services/resolution.service';
 
 @Component({
@@ -10,12 +11,16 @@ export class ResolutionListComponent implements OnInit {
   ResolutionList = null
   CategoryId
 
-  constructor(private rs: ResolutionService) { }
+  constructor(
+    private rs: ResolutionService,
+    private route: ActivatedRoute ) { }
 
   ngOnInit(): void {
-    this.rs.GetResolutions().subscribe(data=>(
+    const id = this.route.snapshot.paramMap.get('id');
+    this.rs.GetResolutions(id).subscribe(data=>{
       this.ResolutionList = data
-    ))
+    })
   }
+  
 
 }

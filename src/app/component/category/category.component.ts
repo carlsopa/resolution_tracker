@@ -13,9 +13,9 @@ export class CategoryComponent implements OnInit {
   constructor(private rs: ResolutionService) { }
 
   ngOnInit(): void {
-    this.rs.GetCategory().subscribe(data=>(
+    this.rs.GetCategory().subscribe(data=>{
       this.CategoryList = data
-    ))
+  })
 
   }
 

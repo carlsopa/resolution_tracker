@@ -1,15 +1,25 @@
-import { Component, OnInit } from '@angular/core';
+import { Component} from '@angular/core';
+import { Inject } from '@angular/core';
+import { MatDialog, MatDialogConfig, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+
+export interface DialogData {
+  title: string;
+  description: string;
+}
 
 @Component({
   selector: 'app-resolution-form',
   templateUrl: './resolution-form.component.html',
   styleUrls: ['./resolution-form.component.scss']
 })
-export class ResolutionFormComponent implements OnInit {
+export class ResolutionFormComponent {
 
-  constructor() { }
+  constructor(private dialog: MatDialog) { }
 
-  ngOnInit(): void {
+  
+    
   }
 
-}
+  
+
+
